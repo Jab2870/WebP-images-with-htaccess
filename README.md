@@ -16,7 +16,7 @@ Place the following in your .htaccess file and jpg/png images will be replaced w
   RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
 
   # Serve WebP image instead
-  RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1]
+  RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1,L]
 </IfModule>
 
 <IfModule mod_headers.c>
